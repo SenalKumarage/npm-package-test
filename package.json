@@ -1,7 +1,14 @@
 {
   "name": "npm-package-test",
-  "version": "0.0.0",
+  "version": "0.0.1",
   "license": "MIT",
+  "author": "Senal Kumarage",
+  "keywords": [
+    "Angular",
+    "Angular-cli",
+    "NPM",
+    "test-library"
+  ],
   "scripts": {
     "ng": "ng",
     "start": "ng serve",
@@ -14,7 +21,7 @@
     "cleardown": "rimraf build lib",
     "prepare": "npm run cleardown && npm run inline-build-templates && npm run ngc-build"
   },
-  "private": true,
+  "private": false,
   "files": [
     "lib"
   ],
