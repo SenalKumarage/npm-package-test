@@ -10,7 +10,9 @@
     "lint": "ng lint",
     "e2e": "ng e2e",
     "inline-build-templates": "gulp inline-build-templates",
-    "ngc-build": "ngc -p ./tsconfig.lib.json"
+    "ngc-build": "ngc -p ./tsconfig.lib.json",
+    "cleardown": "rimraf build lib",
+    "prepare": "npm run cleardown && npm run inline-build-templates && npm run ngc-build"
   },
   "private": true,
   "files": [
@@ -51,6 +53,7 @@
     "karma-jasmine": "~1.1.0",
     "karma-jasmine-html-reporter": "^0.2.2",
     "protractor": "~5.1.2",
+    "rimraf": "^2.6.2",
     "ts-node": "~4.1.0",
     "tslint": "~5.9.1",
     "typescript": "~2.5.3"
