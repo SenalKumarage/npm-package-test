@@ -8,9 +8,16 @@
     "build": "ng build --prod",
     "test": "ng test",
     "lint": "ng lint",
-    "e2e": "ng e2e"
+    "e2e": "ng e2e",
+    "inline-build-templates": "gulp inline-build-templates",
+    "ngc-build": "ngc -p ./tsconfig.lib.json"
   },
   "private": true,
+  "files": [
+    "lib"
+  ],
+  "main": "./lib/test-library.module.js",
+  "typings": "./lib/test-library.module.d.ts",
   "dependencies": {
     "@angular/animations": "^5.2.0",
     "@angular/common": "^5.2.0",
@@ -29,10 +36,13 @@
     "@angular/cli": "~1.7.0",
     "@angular/compiler-cli": "^5.2.0",
     "@angular/language-service": "^5.2.0",
+    "@types/core-js": "^0.9.46",
     "@types/jasmine": "~2.8.3",
     "@types/jasminewd2": "~2.0.2",
     "@types/node": "~6.0.60",
     "codelyzer": "^4.0.1",
+    "gulp": "^3.9.1",
+    "gulp-inline-ng2-template": "^4.1.0",
     "jasmine-core": "~2.8.0",
     "jasmine-spec-reporter": "~4.2.1",
     "karma": "~2.0.0",
